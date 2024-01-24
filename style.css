@@ -1,0 +1,152 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    font-size: 62.5%;
+    --nav-height: 7.2rem;
+
+    --bg-color: #fffffe;
+    --color-text: #094067;
+    --color-paragraphy: #5f6c7b;
+    --color-button: #3da9fc;
+
+    --bg-color-2: #d8eefe;
+}  
+
+html {
+    scroll-behavior: smooth;
+  }
+  
+  html,
+  body {
+    width: 100%;
+    height: 100%;
+  }
+  
+  ul {
+    list-style: none;
+  }
+
+  .wrapper {
+    width: min(50rem, 100%);
+    margin-inline: auto;
+  
+    padding-inline: 2.4rem;
+  }
+
+  section {
+    padding-block: 10rem;
+  }
+
+/*HEADER HOME =================== */
+#home {
+  background-color: var(--bg-color-2);
+  height: 100vh;
+}
+
+#home .content {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#home .content .text {
+  margin-top: 9.2rem;
+}
+
+#home .content .text p {
+  color: var(--color-paragraphy);
+  font-weight: 600;
+  margin-bottom: .5rem;
+
+}
+
+#home .content .text p span {
+  font-weight: 800;
+  color: var(--color-text);
+}
+
+#home .content .text h1 {
+  font-size: 3rem;
+  color: var(--color-text);
+
+  margin-bottom: 2rem;
+}
+
+#home .content .text a button {
+  border-radius: 1rem;
+  padding: 1rem 2rem;
+  border: none;
+
+  background-color: var(--color-button);
+  color: var(--color-text);
+  font-weight: 700;
+
+  box-shadow:  15px 0px 28px #bacdda,
+             -15px -0px 28px #f6ffff;
+
+  transition: all 200ms ease-in-out;
+}
+
+#home .content .text a button:hover {
+  background-color: var(--color-text);
+  color: var(--color-button);
+  cursor: pointer;
+}
+
+#home .content .image {
+  margin-top: 5rem;
+}
+
+#home .content .image img {
+  width: 100%;
+}
+
+@media (min-width: 1300px) {
+  .wrapper {
+    width: min(150rem, 100%);
+  }
+
+  header#home .wrapper {
+    width: min(170rem, 100%);
+  }
+
+  header#home .wrapper .content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10rem;
+  }
+
+  header#home .wrapper .content .text {
+    text-align: start;
+  }
+
+  header#home .wrapper .content .text p {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  header#home .wrapper .content .text h1 {
+    font-size: 5rem;
+    margin-bottom: 4rem;
+  } 
+
+  header#home .wrapper .content .text a button {
+    font-size: 2rem;
+  }
+}
+
+
+
+
+
+ 
