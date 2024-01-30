@@ -123,7 +123,7 @@ nav {
   /* NAVIGATION ON SCROLL =================== */
   nav.scroll {
     /* From https://css.glass */
-    background: rgba(255, 255, 255, 0.64);
+    background: #094067cf;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(6.3px);
     -webkit-backdrop-filter: blur(6.3px);
@@ -288,11 +288,16 @@ nav {
       nav#navigation .menu ul li a {
         font-weight: 700;
         opacity: .7;
+        color: var(--color-button);
       }
 
       nav#navigation .menu ul li a:hover {
         color: var(--primary-color);
         opacity: 1;
+      }
+
+      nav#navigation.scroll .menu ul li a {
+        color: #fffffe;
       }
 
       nav#navigation .menu a {
