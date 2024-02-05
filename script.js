@@ -3,7 +3,7 @@ window.addEventListener('scroll', onScroll)
 onScroll()
 function onScroll() {
     showNavOnScroll()
-    showButtonWhatsappOnScroll()
+    showbackToTopButtonOnScroll()
 }
 
 function showNavOnScroll() {
@@ -14,11 +14,11 @@ function showNavOnScroll() {
     }
 }
 
-function showButtonWhatsappOnScroll() {
-    if(scrollY > 200) {
-        document.querySelector("#buttonWhatsapp").classList.add("show")
+function showbackToTopButtonOnScroll() {
+    if(scrollY > 100) {
+        document.querySelector("#backToTopButton").classList.add("show")
     } else {
-        document.querySelector("#buttonWhatsapp").classList.remove("show")
+        document.querySelector("#backToTopButton").classList.remove("show")
     }
 }
 

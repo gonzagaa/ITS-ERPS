@@ -111,6 +111,7 @@ html {
 
 #home .content .image img {
   width: 90%;
+  animation: moveimg infinite 3s ease-in-out;
 }
 
 /*SOBRE =================== */
@@ -268,6 +269,8 @@ html {
 
 #recursos .content details .text a button:hover {
   box-shadow: 2px 3px 10px #1d1d1d;
+  background-color: #1d98f7;
+  cursor: pointer;
 }
 
 @keyframes swep {
@@ -326,6 +329,19 @@ html {
   text-align: left;
 }
 
+#integracao .video {
+  margin-top: 4rem;
+}
+
+#integracao .video video {
+  width: 100%;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+  border-radius: 1rem;
+
+  box-shadow: 2px 2px 10px #00000061;
+}
+
 /*CONTATO=================== */
 #contato video {
   display: none;
@@ -356,7 +372,7 @@ html {
   width: 100%;
   height: 100vh;
 
-  filter: brightness(.5);
+  filter: brightness(.2);
 }
 
 #contato .content .form-element {
@@ -380,11 +396,16 @@ html {
   margin-bottom: .5rem;
 }
 
+#contato .content .form input::placeholder,
+#contato .content .form textarea::placeholder {
+  color: #fffffe92;
+}
+
 #contato .content .form input,
 #contato .content .form textarea {
   /* From https://css.glass */
   background: rgba(248, 248, 248, 0.2);
-  box-shadow: 2px 2px 10px #121212;
+  box-shadow: 2px 2px 10px #12121292;
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
   border: 1px solid rgba(255, 255, 255, 0.3);
@@ -402,6 +423,7 @@ html {
   font-weight: 700;
 
   transition: all 200ms ease-in-out;
+  cursor: pointer;
 }
 
 #contato .content .form .input button:hover {
@@ -434,14 +456,51 @@ html {
   color: var(--bg-color);
 }
 
+/*backToTopButton =================== */
+#backToTopButton {
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  z-index: 100;
+
+  opacity: 0;
+  visibility: hidden;
+
+  transform: translateY(100%);
+  transition: all 300ms ease-in-out;
+}
+
+#backToTopButton.show {
+  opacity: 1;
+  visibility: visible;
+
+  transform: translateY(0);
+}
+
+#backToTopButton ion-icon {
+  background-color: var(--color-button);
+  color: var(--color-text);
+  border-radius: 50%;
+  font-size: 3rem;
+  transition: all 300ms ease-in-out;
+}
+
+#backToTopButton ion-icon:hover {
+  transform: scale(1.1);
+}
+
 /*DESKTOP =================== */
 @media (min-width: 1300px) {
   .wrapper {
-    width: min(150rem, 100%);
+    width: min(130rem, 100%);
+  }
+
+  #backToTopButton ion-icon {
+    font-size: 4rem;
   }
 
   header#home .wrapper {
-    width: min(170rem, 100%);
+    width: min(160rem, 100%);
   }
 
   header#home .wrapper .content {
@@ -484,6 +543,27 @@ html {
     gap: 8rem;
   }
 
+  section#integracao .wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  section#integracao .wrapper header {
+    max-width: 60%;
+  }
+
+  section#integracao .wrapper .content .topics {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center;
+  }
+
+  section#integracao .wrapper .content .video video {
+    width: initial;
+  }
+
   section#contato video {
     display: inherit;
   }
@@ -495,7 +575,16 @@ html {
   section#contato .content .form h2 {
     font-size: var(--size-h2-desktop);
   }
-  
+
+  footer#footer img {
+    width: 10rem;
+  }
+}
+
+@keyframes moveimg {
+  50% {
+    transform: translateY(10px);
+  }
 }
 
 

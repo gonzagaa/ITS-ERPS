@@ -1,0 +1,72 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    font-size: 62.5%;
+    --nav-height: 7.2rem;
+
+    --bg-color: #fffffe;
+    --color-text: #094067;
+    --color-paragraphy: #5f6c7b;
+    --color-button: #3da9fc;
+
+    --bg-color-2: #d8eefe;
+
+    --size-h2: 3rem;
+    --size-h2-desktop: 4rem;
+}  
+
+nav {
+    /* From https://css.glass */
+    background: var(--bg-color-2);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(6.3px);
+    -webkit-backdrop-filter: blur(6.3px);
+  }
+
+#recurso {
+    background-color: var(--bg-color-2);
+}
+
+#recurso .content .text,
+#recurso header {
+    text-align: left;
+}
+
+#recurso header h2 {
+    color: var(--color-button);
+    margin-bottom: 2rem;
+}
+
+#recurso .content .text p {
+    font-weight: 400;
+}
+
+#recurso .content .text ul {
+    margin-top: 3rem;
+    list-style: decimal;
+}
+
+#recurso .content .text ul li {
+    font-weight: 400;
+}
+
+@media (min-width: 1300px) {
+    section#recurso h2 {
+        font-size: 4rem;
+    }
+
+    section#recurso p {
+        font-size: 1.6rem;
+    }
+
+    section#recurso ul {
+        font-size: 1.7rem;
+    }
+}
+
